@@ -36,6 +36,9 @@ body {
 ul {
     list-style: none;
 }
+img {
+    max-width: 100%;
+}
 section {
     padding-block: 13rem;
 }
@@ -210,6 +213,9 @@ body.menu-expanded button  {
     left: 0;
     z-index: -1;
 }
+#inicio button {
+    margin-inline: auto;
+}
 #inicio p {
     font-size: 1.8rem;
     line-height: 150%;
@@ -217,9 +223,11 @@ body.menu-expanded button  {
     color: var(--paragrafo);
     margin-bottom: 3.2rem;
    }
-#inicio .garotoProgramando {
-width: 100%;
-display: block;
+#inicio img {
+    width: 26.4rem;
+    display: block;
+    margin-inline: auto;
+    object-position: 0 2rem;
 
 }
 /*============ SOBRE MIM ==============*/
@@ -400,3 +408,162 @@ footer {
     footer .social-links {
         justify-content: flex-start;
  }
+
+ /*RESPONSIVIDADE*/
+
+ @media (min-width:1024px) {
+    /*==== GERAL ====*/
+    body {
+        overflow: auto;
+    }
+    .wrapper {
+        width: min(112rem, 100%);
+        display: grid;
+    }
+    .col-a {
+        grid-area: A;
+      }
+    .col-b {
+        grid-area: B;
+      }
+    section {
+        padding-block: 16rem;
+
+    }
+    section h2 {
+        font-size: 4rem;
+        line-height: 5.2rem;
+    }
+    section header h2 {
+        font-size: 4rem;
+        line-height: 5.2rem;
+    }
+    /*navegacao*/
+
+    /*resetando*/
+    nav#navegacao .wrapper * {
+        margin: 0;
+        padding: 0;
+        visibility: initial;
+        display: initial;
+        opacity: initial;
+        flex-direction: initial;
+        position: initial;
+        font-size: initial;
+        font-weight: initial;
+        transform: initial;
+        color: initial;
+        background-color: initial;
+        filter: initial;
+      }
+      nav#navegacao .close-menu,
+      nav#navegacao .open-menu,
+      nav#navegacao .social-links {
+        display: none;
+      }
+      nav#navegacao .menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 60%;
+        
+      }
+      nav#navegacao .menu ul:nth-child(1) {
+        display: flex;
+        gap: 3.2rem; 
+    
+      }
+      nav#navegacao .menu ul li a {
+        color: var(--títulos);
+        opacity: 0.7;
+      }
+      nav#navegacao .menu li a {
+        transition: opacity 0.4s;
+      }
+      nav#navegacao .menu li a::after {
+        content: '';
+        width: 0%;
+        height: 2px;
+        background-color: var(--primary-color);
+
+        position: relative;
+        bottom: -2rem ;
+        left: -0.5rem;
+
+        display: block;
+
+        transition: width 0.2s;
+      }
+      /*HOME*/
+      #inicio {
+      
+      }
+      #inicio::before {
+        height: calc(88% - var(--nav-height));
+      }
+      #inicio {
+        padding-top: 13rem;
+      }
+      #inicio .wrapper {
+        grid-template-columns: 60rem 1fr;
+        grid-template-areas: 
+        'A B'
+        'C C';
+      }
+      #inicio  .col-a {   
+        text-align: center;
+        align-self: center;
+      }
+      
+      #inicio h1  {
+        font-size: 5.2rem;
+      }
+      #inicio p {
+        font-size: 1.8rem;
+      }
+      #inicio .button {
+        margin: 0;  
+      }
+      #inicio img  {
+        width: 100%;
+      }
+   
+
+       /*========SOBRE MIM===========*/
+       #sobre-mim .wrapper {
+        padding-block: 10rem;
+        width: 50rem;
+     }
+           
+     #sobre-mim h2  {
+        font-size: 3rem;
+      }
+      #sobre-mim p {
+        font-size: 1.8rem;
+      }
+     #sobre-mim p {
+        margin-bottom: 0;
+     }
+     /*HABILIDADES*/
+     #habilidades .wrapper {
+        width: 55rem;
+        text-align: left;
+        align-self: center;
+      }
+     #habilidades h2, h4 {
+        text-align: center;
+        align-self: center;
+        margin-inline: auto;
+     }
+     #habilidades .cards {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 7rem;
+    }
+    #habilidades .card {
+        width: 100%;
+    }
+
+    /*========PROJETOS===============*/
+ 
+}
