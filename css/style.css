@@ -223,6 +223,7 @@ body.menu-expanded button  {
     margin-bottom: 3.2rem;
    }
 #inicio div img {
+
     display: block;
     margin-inline: auto;
     object-position: 0 2rem;
@@ -239,16 +240,21 @@ body.menu-expanded button  {
     text-align: justify;
 }
 /*===== HABILIDADES=======*/
+
 #habilidades {
     background-color: var(--secundary-color);
 }
 
-#habilidades .cards {
+section#habilidades .cards {
     display: flex;
-    gap: 10rem;
+    
+    width: auto;
+    padding: 2rem;
+
+    align-items: center;
     justify-content: center;
-    flex-direction: column;
-    margin-right: 0;
+    flex-wrap: wrap;
+   
 }
 
 #habilidades  .card h3 {
@@ -256,25 +262,20 @@ body.menu-expanded button  {
     align-items: center;
     text-align: center; 
 }   
-#habilidades .card {
-    display: flex;
+section#habilidades .card {
+    padding: 2rem;
+    width: 28rem;
     align-items: center;
     text-align: center;
-    justify-content: space-between;
-    margin-right: 0;
-    margin-left: 0;
+    margin: 2rem;
+    border: 1px 1px 1px solid rgba(0, 0, 0, 0.459);
+    
+    border-radius: 2rem;
+    transition: 0.5s;   
     background-color: #fff;
 }
-#habilidades .cards .card {
-    transform: translateY(100px);
-    opacity: 0;
-    transition: .5s;
-    }
-    #habilidades .cards:hover .card {
-        transform: translateY(0px);
-        opacity: 1;
-    
-     }
+
+     
 #habilidades  button {
 
 padding: 0.5rem 1rem;
@@ -349,8 +350,9 @@ font-weight: 700;
    box-shadow: 0 5px 15px var(--primary-color) ;
 }
 /*========CONTATO=========*/
-#contato .wrapper {
-    width: 50%;
+
+#contato form {
+    width: 100%;
 }
 #contato header h4 {
     margin-bottom: 4rem;
@@ -593,6 +595,7 @@ footer {
         line-height: 150%;
      }
      /*HABILIDADES*/
+     /*
      #habilidades .wrapper {
         width: 50rem;
         text-align: left;
@@ -612,9 +615,15 @@ footer {
         width: 100%;
     }
  }
+ */
 /*========PROJETOS===============*/
 #projetos {
     padding-block: 5rem;
 }
 
 /*========CONTATO===============*/
+#contato form {
+    width: 70%;
+    margin: 0 auto;
+}
+}
