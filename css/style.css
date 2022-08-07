@@ -241,56 +241,7 @@ body.menu-expanded button  {
 }
 /*===== HABILIDADES=======*/
 
-#habilidades {
-    background-color: var(--secundary-color);
-}
 
-section#habilidades .cards {
-    display: flex;
-    
-    width: auto;
-    padding: 2rem;
-
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-   
-}
-
-#habilidades  .card h3 {
-    margin: 1.6rem;
-    align-items: center;
-    text-align: center; 
-}   
-section#habilidades .card {
-    padding: 2rem;
-    width: 28rem;
-    align-items: center;
-    text-align: center;
-    margin: 2rem;
-    border: 1px 1px 1px solid rgba(0, 0, 0, 0.459);
-    
-    border-radius: 2rem;
-    transition: 0.5s;   
-    background-color: #fff;
-}
-
-     
-#habilidades  button {
-
-padding: 0.5rem 1rem;
-border-radius: 3.2rem;
-border: 0;
-cursor: pointer;
-color: var(--secundary-color);  
-font-weight: 700;
-}
-#habilidades section .card button {
-    background: linear-gradient(to right, #A6A7A2, #484f56);
-}
-#habilidades section .card {
-    box-shadow: 20px 20px 15px -30px;
-}
 /*==== PROJETOS CARDS */
 .container{
     position: relative;
