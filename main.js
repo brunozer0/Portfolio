@@ -8,8 +8,9 @@ function onScroll() {
 
     activateMenuAtCurrentSection(inicio)
     activateMenuAtCurrentSection(sobremim)
-    activateMenuAtCurrentSection(habilidades)
+    activateMenuAtCurrentSection(conhecimentos)
     activateMenuAtCurrentSection(projetos)
+    activateMenuAtCurrentSection(qualificacoes)
     activateMenuAtCurrentSection(contato)
     
   }
@@ -58,7 +59,7 @@ function activateMenuAtCurrentSection(section) {
    
 }
 
-
+//navegação//
   function showNavOnScroll() {
     if (scrollY > 0) {
         navegacao.classList.add('scroll')
@@ -66,6 +67,19 @@ function activateMenuAtCurrentSection(section) {
         navegacao.classList.remove('scroll')
       }
   }
+// cursos //
+const progresso1 = document.querySelector('.barraProgresso1')
+progresso1.setAttribute("style", "width: 100%")
+
+const progresso2 = document.querySelector('.barraProgresso2')
+progresso2.setAttribute("style", "width: 100%")
+
+const progresso3 = document.querySelector('.barraProgresso3')
+progresso3.setAttribute("style", "width: 59%")
+
+const progresso4 = document.querySelector('.barraProgresso4')
+progresso4.setAttribute("style", "width: 15%")
+  //botao voltar ao topo//
   function showBackToTopButtonOnScroll() {
     if (scrollY > 1000) {
         backToTopButton.classList.add('show')
@@ -73,6 +87,8 @@ function activateMenuAtCurrentSection(section) {
         backToTopButton.classList.remove('show')
       }
   }
+
+  // expansão do menu//
 function openMenu() {
     document.body.classList.add('menu-expanded')
   }

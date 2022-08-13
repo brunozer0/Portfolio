@@ -9,6 +9,7 @@
 :root {
     --primary-color: #A6A7A2;
     --secundary-color: #f3f3f2;
+    --ligthgray: #d3d3d3;
     --títulos: #22262a; 
     --paragrafo: #484f56;
     font-size: 62.5%;
@@ -78,7 +79,7 @@ section header h1 {
 section p {
     font-size: 1.6rem;
     line-height: 150%;
-    color: var(--paragraph);
+    color: var(--paragrafo);
 }
 
 ul {
@@ -119,7 +120,7 @@ nav button.close-menu {
 }
 button {
     padding: 1rem;
-    background: var(--primary-color);
+    background: black;
     color: var(--secundary-color);
     font: inherit;
     font-weight: 700;
@@ -127,7 +128,7 @@ button {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.1s;
 }
  button:hover,
  button:focus {
@@ -239,9 +240,68 @@ body.menu-expanded button  {
 #sobremim p {
     text-align: justify;
 }
-/*===== HABILIDADES=======*/
-
-
+/*===== Conhecimentos=======*/
+#conhecimentos{ 
+padding-block: 10rem;
+}
+.containerCard {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.containerCard .card {
+    position: relative;
+    padding: 1rem;
+    width: 30rem;
+    background-color: var(--secundary-color);
+    margin: 2rem;
+    border: 1px 1px 1px solid #000000;
+    overflow: hidden;
+    border-radius: 2rem;
+    transition: .5s;
+    text-align: center;
+}
+.containerCard .card svg {
+    transition: .5s;
+}
+.containerCard .card .contentCard {
+    padding: 1.5rem;    
+}
+.containerCard .card .contentCard p {
+    color: var(--paragrafo);
+    transition: .5s;
+    font-size: 1.8rem;
+  
+}
+.containerCard .card .contentCard a {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 1rem;
+    background-color: #000000;
+    color: var(--secundary-color);
+    border-radius: .4rem;
+    text-decoration: none;
+    transition: .5s;
+    text-align: justify;    
+    outline: none;
+    margin-top: 2rem;
+}
+.containerCard .card:hover{
+    background-color: var(--primary-color);
+    color: var(--títulos);
+    margin-top: 0.6px;
+    box-shadow: 2px 2px 15px var(--primary-color);
+    border-color: var(--primary-color);
+}
+.containerCard .card:hover .contentCard p {
+    color: var(--secundary-color);
+}
+.containerCard .card:hover .contentCard a {
+    color: var(--primary-color);
+    background-color: black;
+}
 /*==== PROJETOS CARDS */
 .container{
     position: relative;
@@ -300,11 +360,85 @@ body.menu-expanded button  {
    font-weight: 500;
    box-shadow: 0 5px 15px var(--primary-color) ;
 }
+/*==== Qualificacoes ============= */
+
+.containerCursos {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+.cursosFeitos {
+    position: relative;
+
+    padding: 2rem;
+    width: 40rem;
+
+    padding-inline: 1rem;
+    align-items: center;
+    background-color: var(--secundary-color);
+    border-radius: 2rem;
+    transition: .5s;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.cursosFeitos h3 {
+    margin-bottom: 1.8rem;
+}
+.cursosFeitos p {
+    background-color: var(--secundary-color);
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.cursosFeitos a {
+    text-decoration: none;
+    color: var(--títulos);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.cursosFeitos button {
+    margin-top: 1.7rem;
+    background-color: black;
+    border: 1px solid #d3d3d3;
+}
+.cursosFeitos button a {
+    color: white;
+}
+.cursosFeitos button:hover{
+    background-color: var(--paragrafo);
+    transition: .4s;
+}
+.barra {
+    width: 100%;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: .1rem;
+    background-color: var(--paragrafo);
+}
+.barra div {
+height: 100%;
+border-radius: .1rem;
+background-color: var(--primary-color);
+}
 /*========CONTATO=========*/
 
-#contato form {
-    width: 100%;
+section#contato {
+    background: #ffffff;
+    margin-bottom: 4rem;
 }
+#contato form{
+    margin: 0 auto;
+    width: 50%;
+    text-align: left;
+}
+#contato form button {
+    width: 10rem;
+}
+
 #contato header h4 {
     margin-bottom: 4rem;
 }
@@ -369,8 +503,8 @@ footer {
  /*== VOLTAR PARA O TOPO====*/
  #backToTopButton {
     position: fixed;
-    bottom: 1rem;
-    right: 2.5rem;
+    bottom: 2rem;
+    right: 0rem;
 
     opacity: 0;
     visibility: hidden;
@@ -441,7 +575,7 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 60%;
+        width: 65%;
         
       }
       nav#navegacao .menu ul:nth-child(1) {
@@ -533,17 +667,15 @@ footer {
 
        /*========SOBRE MIM===========*/
        #sobremim .wrapper {
-        grid-template-columns: 65rem 1fr;
-        grid-template-areas: 'B A';
-        gap: 9rem;
+        grid-template-columns: 55rem 1fr;
+        grid-template-areas: 'B A'
      }
      #sobremim .col-a {
         align-self: center;
      }
      #sobremim p {
-        margin-bottom: 0;
-        text-align: justify;
-        line-height: 150%;
+        font-size: 2rem;
+       margin-bottom: 0;
      }
      /*HABILIDADES*/
      /*
@@ -573,8 +705,5 @@ footer {
 }
 
 /*========CONTATO===============*/
-#contato form {
-    width: 70%;
-    margin: 0 auto;
-}
+
 }
