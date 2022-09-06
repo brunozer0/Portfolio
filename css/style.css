@@ -176,14 +176,14 @@ body.menu-expanded .menu {
 .menu ul:nth-child(1) {
     display: flex;
     flex-direction: column;
-    gap: 6rem;
+    gap: 4rem;
     margin-top: 6rem;
     font-weight: 700;
     font-size: 2.4rem;
     line-height: 3.1rem;
     text-align: center;
     text-decoration: none;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 
 }
 .menu ul > li > a {
