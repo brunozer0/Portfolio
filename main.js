@@ -75,10 +75,10 @@ const progresso2 = document.querySelector('.barraProgresso2')
 progresso2.setAttribute("style", "width: 100%")
 
 const progresso3 = document.querySelector('.barraProgresso3')
-progresso3.setAttribute("style", "width: 59%")
+progresso3.setAttribute("style", "width: 80%")
 
 const progresso4 = document.querySelector('.barraProgresso4')
-progresso4.setAttribute("style", "width: 15%")
+progresso4.setAttribute("style", "width: 20%")
   //botao voltar ao topo//
   function showBackToTopButtonOnScroll() {
     if (scrollY > 1000) {
